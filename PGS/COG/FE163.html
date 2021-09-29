@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/PGS/estilo.css">
+  
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+$.ajax({
+    url: '/CSV/COG/FE163.csv',
+    dataType: 'text',
+  }).done(successFunction);
+
+  function successFunction(data) {
+  var allRows = data.split(/\r?\n|\r/);
+  var table = '<table>';
+  for (var singleRow = 1; singleRow < allRows.length; singleRow++) {
+
+    if(singleRow <7){
+    if (singleRow === 0) {
+      table += '<thead>';
+      table += `<tr>`;
+    } else {
+      table += '<tr>';
+    }
+  }
+
+    var rowCells = allRows[singleRow].split(',');
+    for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+
+      if (singleRow === 1) {
+        table += `<th class="topo${rowCell}">`;                  
+        table += rowCells[rowCell];
+        table += '</th>';
+      } else {    
+        
+          if(singleRow<7){
+               
+        table += `<td class="col_${rowCell}__lin_${singleRow}">`; 
+ 
+        var data_arquivo = rowCells[0]
+
+        table += parseFloat(eval(rowCells[rowCell])).toFixed(2);
+
+        var val_col_1= parseFloat(eval(rowCells[1]))
+        var pri_col = 100 - val_col_1
+
+        var val_col_2= parseFloat(eval(rowCells[2]))
+        var seg_col = 100 - val_col_2
+
+          table += '</td>';
+
+          }
+       
+      }
+
+    }
+    if (singleRow === 0) {
+      table += '</tr>';
+      table += '</thead>';
+      table += `<tbody>`;
+    } else {
+      table += '</tr>';
+    }
+  } 
+  table += '</tbody>';
+  table += '</table>';
+  $('body').append(table);
+
+ /*Selecionar Cabecçalho --------------------------------------*/
+  document.querySelector('.topo0').innerHTML ='DATA E HORA'
+  document.querySelector('.topo1').innerHTML ='DISCO (C)'  
+  document.querySelector('.topo2').innerHTML ='MEMÓRIA RAM'  
+  document.querySelector('.topo3').innerHTML ='PROCESSADOR'  
+   
+  //document.querySelector('.topo4').innerHTML ='ESPAÇO LIVRE'  
+  
+ /* FIM Selecionar Cabecçalho --------------------------------*/
+
+ /*Reduzinho casa coluna 1 linha 1,2,3,4,5*/
+ 
+  var Arra =[]; 
+  const disco = 100
+  
+//----------------------------------------------------------------------------//
+  document.querySelector('.col_0__lin_2').innerHTML = `${data_arquivo}`  
+  document.querySelector('.col_0__lin_3').innerHTML = `${data_arquivo}`
+  document.querySelector('.col_0__lin_4').innerHTML = `${data_arquivo}` 
+  document.querySelector('.col_0__lin_5').innerHTML = `${data_arquivo}` 
+  document.querySelector('.col_0__lin_6').innerHTML = `${data_arquivo}` 
+//----------------------------------------------------------------------------//
+  document.querySelector('.col_1__lin_2').innerHTML = `${pri_col.toFixed(2)}` 
+  document.querySelector('.col_1__lin_3').innerHTML = `${pri_col.toFixed(2)}` 
+  document.querySelector('.col_1__lin_4').innerHTML = `${pri_col.toFixed(2)}` 
+  document.querySelector('.col_1__lin_5').innerHTML = `${pri_col.toFixed(2)}` 
+  document.querySelector('.col_1__lin_6').innerHTML = `${pri_col.toFixed(2)}` 
+
+  }
+
+  </script>
+</body>
+</html>
