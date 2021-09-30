@@ -224,14 +224,18 @@ section{
 
 .maior{
     
-    background:url(../img/seta-verde.png) no-repeat center right;
+    background:url(../img/seta1.png) no-repeat center right;
     background-size: 15px ;
     background-position: 70px;
 }
 
 .menor{
-    background-color: rgba(233, 10, 10, 0.466);
+    background:url(../img/seta2.png) no-repeat center right;
+    background-size: 15px ;
+    background-position: 70px;
 }
 .igual{
-    background-color: rgb(179, 176, 16);
+    background:url(../img/op3.PNG) no-repeat center right;
+    background-size: 15px ;
+    background-position: 70px;
 }
