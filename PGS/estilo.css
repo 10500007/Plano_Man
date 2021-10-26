@@ -224,18 +224,27 @@ section{
 
 .maior{
     
-    background:url(../img/seta1.png) no-repeat center right 5px;
+   /* background:url(../img/seta1.png) no-repeat center right 5px;*/
+    font-weight: bold;    
+    font-size: 15px;
+    color: rgb(22, 173, 22);
     background-size: 15px ;
     
 }
 
 .menor{
-    background:url(../img/seta2.png) no-repeat center right 5px;
+    font-weight: bold;    
+    font-size: 15px;
+    color: rgb(201, 17, 17);
+   /* background:url(../img/seta2.png) no-repeat center right 5px;*/
     background-size: 15px ;
    
 }
 .igual{
-    background:url(../img/op3.PNG) no-repeat center right 5px;
+    font-weight: bold;    
+    font-size: 15px;
+    color: rgb(24, 62, 230);
+    /*background:url(../img/op3.PNG) no-repeat center right 5px;*/
     background-size: 15px ;
     
 }

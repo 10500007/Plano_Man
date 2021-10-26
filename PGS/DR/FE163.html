@@ -110,7 +110,167 @@ $.ajax({
   document.querySelector('.col_1__lin_5').innerHTML = `${pri_col.toFixed(2)}` 
   document.querySelector('.col_1__lin_6').innerHTML = `${pri_col.toFixed(2)}` 
 //----------------------------------------------------------------------------//
+
+
+    ////////////////////-----COLUNA 1 --------/////////////////
+    var n0c1 = document.querySelector('.col_1__lin_2').textContent
+     var n1c1 = document.querySelector('.col_1__lin_3').textContent
+     var n2c1 = document.querySelector('.col_1__lin_4').textContent
+     var n3c1 = document.querySelector('.col_1__lin_5').textContent
+     var n4c1 = document.querySelector('.col_1__lin_6').textContent
+ 
+ 
+     var array_c1 = [n1c1,n2c1,n3c1,n4c1];
+     
+     var maior_c1 = Math.max.apply(null, array_c1);
+     var menor_c1 = Math.min.apply(null, array_c1);
+     console.log(maior_c1);
+     console.log(menor_c1);
+ 
+ //-----------------------------//
+ if(maior_c1 == menor_c1){
+    document.querySelector('.col_1__lin_2').classList.add('igual');
+    }else{
+
+            if(n1c1 == maior_c1){
+            document.querySelector('.col_1__lin_3').classList.add('maior');
+    
+            }else if(n2c1 == maior_c1){
+            document.querySelector('.col_1__lin_4').classList.add('maior')  
+    
+            }else if(n3c1 == maior_c1){
+            document.querySelector('.col_1__lin_5').classList.add('maior')
+    
+            }else if(n4c1 == maior_c1){
+            document.querySelector('.col_1__lin_6').classList.add('maior')
+    
+            }
+    
+            //-----------------------------//
+            if (n1c1 == menor_c1){
+            document.querySelector('.col_1__lin_3').classList.add('menor')  
+    
+            }else if(n2c1 == menor_c1){
+            document.querySelector('.col_1__lin_4').classList.add('menor')  
+    
+            }else if(n3c1 == menor_c1){
+            document.querySelector('.col_1__lin_5').classList.add('menor')
+    
+            }else if(n4c1 == menor_c1){
+            document.querySelector('.col_1__lin_6').classList.add('menor')
+    
+            }
+   }
+
+
+    ////////////////////-----COLUNA 2 --------/////////////////
+     var n0c2 = document.querySelector('.col_2__lin_2').textContent
+     var n1c2 = document.querySelector('.col_2__lin_3').textContent
+     var n2c2 = document.querySelector('.col_2__lin_4').textContent
+     var n3c2 = document.querySelector('.col_2__lin_5').textContent
+     var n4c2 = document.querySelector('.col_2__lin_6').textContent
+ 
+ 
+     var array_c2 = [n1c2,n2c2,n3c2,n4c2];
+     
+     var maior_c2 = Math.max.apply(null, array_c2);
+     var menor_c2 = Math.min.apply(null, array_c2);
+     console.log(maior_c2);
+     console.log(menor_c2);
+ 
+ //-----------------------------//
+ if(maior_c2 == menor_c2){
+    document.querySelector('.col_2__lin_2').classList.add('igual');
+    }else{
+
+            if(n1c2 == maior_c2){
+            document.querySelector('.col_2__lin_3').classList.add('maior');
+    
+            }else if(n2c2 == maior_c2){
+            document.querySelector('.col_2__lin_4').classList.add('maior')  
+    
+            }else if(n3c2 == maior_c2){
+            document.querySelector('.col_2__lin_5').classList.add('maior')
+    
+            }else if(n4c2 == maior_c2){
+            document.querySelector('.col_2__lin_6').classList.add('maior')
+    
+            }
+    
+            //-----------------------------//
+            if (n1c2 == menor_c2){
+            document.querySelector('.col_2__lin_3').classList.add('menor')  
+    
+            }else if(n2c2 == menor_c2){
+            document.querySelector('.col_2__lin_4').classList.add('menor')  
+    
+            }else if(n3c2 == menor_c2){
+            document.querySelector('.col_2__lin_5').classList.add('menor')
+    
+            }else if(n4c2 == menor_c2){
+            document.querySelector('.col_2__lin_6').classList.add('menor')
+    
+            }
+   }
+ 
+ 
+ 
+ //----------------------------------------------------------------------------//
+    
+    ////////////////////-----COLUNA 3 --------/////////////////
+    var n0c3 = document.querySelector('.col_3__lin_2').textContent
+    var n1c3 = document.querySelector('.col_3__lin_3').textContent
+    var n2c3 = document.querySelector('.col_3__lin_4').textContent
+    var n3c3 = document.querySelector('.col_3__lin_5').textContent
+    var n4c3 = document.querySelector('.col_3__lin_6').textContent
+
+
+    var array_c3 = [n1c3,n2c3,n3c3,n4c3];
+    
+    var maior_c3 = Math.max.apply(null, array_c3);
+    var menor_c3 = Math.min.apply(null, array_c3);
+    console.log(maior_c3);
+    console.log(menor_c3);
+
+//-----------------------------//
+if(maior_c3 == menor_c3){
+document.querySelector('.col_3__lin_2').classList.add('igual');
+}else{
+        if(n1c3 == maior_c3){
+          document.querySelector('.col_3__lin_3').classList.add('maior');
+
+        }else if(n2c3 == maior_c3){
+          document.querySelector('.col_3__lin_4').classList.add('maior')  
+
+        }else if(n3c3 == maior_c3){
+          document.querySelector('.col_3__lin_5').classList.add('maior')
+
+        }else if(n4c3 == maior_c3){
+          document.querySelector('.col_3__lin_6').classList.add('maior')
+
+        }
+
+  //-----------------------------//
+  if (n1c3 == menor_c3){
+          document.querySelector('.col_3__lin_3').classList.add('menor')  
+
+        }else if(n2c3 == menor_c3){
+          document.querySelector('.col_3__lin_4').classList.add('menor')  
+
+        }else if(n3c3 == menor_c3){
+          document.querySelector('.col_3__lin_5').classList.add('menor')
+
+        }else if(n4c3 == menor_c3){
+          document.querySelector('.col_3__lin_6').classList.add('menor')
+
+        }
+  }
+
+
+
 //----------------------------------------------------------------------------//
+
+    
 
 
   }

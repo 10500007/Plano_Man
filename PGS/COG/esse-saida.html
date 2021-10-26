@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+ <style>
+   table {
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: collapse;
+        border: 1px solid #d4d4d4;
+      }
+    
+      tr:nth-child(even) {
+        background: #d4d4d4;
+      }
+    
+      th, td {
+        padding: 10px 30px;
+      }
+    
+      th {
+        border-bottom: 1px solid #d4d4d4;
+      }     
+ </style>
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+$.ajax({
+    url: '/CSV/COG/saida.csv',
+    dataType: 'text',
+  }).done(successFunction);
+
+  function successFunction(data) {
+        var allRows = data.split(",");
+        var table = '<table>';
+          arra = [];
+        for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+        
+          if (singleRow === 0) {
+           
+            table += '<thead>';
+            table += '<tr>';
+          } else {
+            table += '<tr>';
+          }
+          var rowCells = allRows[singleRow].split(',');
+          for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+            if (singleRow === 0) {
+              
+              table += '<th>';
+              table += rowCells[rowCell];
+              table += '</th>';
+            } else {
+              console.log(rowCells[rowCell])
+
+              table += '<td>';
+              table += rowCells[rowCell];
+              table += '</td>';
+            }
+          }
+          
+          if (singleRow === 0) {
+            table += '</tr>';
+            table += '</thead>';
+            table += '<tbody>';
+          } else {
+            table += '</tr>';
+          }
+        } 
+        table += '</tbody>';
+        table += '</table>';
+        $('body').append(table);
+      }
+ 
+  
+ /* FIM Selecionar Cabecçalho --------------------------------*/
+
+
+ /*Reduzinho casa coluna 1 linha 1,2,3,4,5*/
+ 
+ 
+ 
+ 
+//----------------------------------------------------------------------------//
+
+  
+
+
+  </script>
+
+
+</body>
+</html>

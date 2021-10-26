@@ -170,56 +170,6 @@ $.ajax({
    }
 
 
- ////////////////////-----COLUNA 2 --------/////////////////
-     var n0c2 = document.querySelector('.col_2__lin_2').textContent
-     var n1c2 = document.querySelector('.col_2__lin_3').textContent
-     var n2c2 = document.querySelector('.col_2__lin_4').textContent
-     var n3c2 = document.querySelector('.col_2__lin_5').textContent
-     var n4c2 = document.querySelector('.col_2__lin_6').textContent
- 
- 
-     var array_c2 = [n1c2,n2c2,n3c2,n4c2];
-     
-     var maior_c2 = Math.max.apply(null, array_c2);
-     var menor_c2 = Math.min.apply(null, array_c2);
-     console.log(maior_c2);
-     console.log(menor_c2);
- 
- //-----------------------------//
- if(maior_c2 == menor_c2){
-    document.querySelector('.col_2__lin_2').classList.add('igual');
-    }else{
-
-            if(n1c2 == maior_c2){
-            document.querySelector('.col_2__lin_3').classList.add('maior');
-    
-            }else if(n2c2 == maior_c2){
-            document.querySelector('.col_2__lin_4').classList.add('maior')  
-    
-            }else if(n3c2 == maior_c2){
-            document.querySelector('.col_2__lin_5').classList.add('maior')
-    
-            }else if(n4c2 == maior_c2){
-            document.querySelector('.col_2__lin_6').classList.add('maior')
-    
-            }
-    
-            //-----------------------------//
-            if (n1c2 == menor_c2){
-            document.querySelector('.col_2__lin_3').classList.add('menor')  
-    
-            }else if(n2c2 == menor_c2){
-            document.querySelector('.col_2__lin_4').classList.add('menor')  
-    
-            }else if(n3c2 == menor_c2){
-            document.querySelector('.col_2__lin_5').classList.add('menor')
-    
-            }else if(n4c2 == menor_c2){
-            document.querySelector('.col_2__lin_6').classList.add('menor')
-    
-            }
-   }    
-    
     ////////////////////-----COLUNA 2 --------/////////////////
      var n0c2 = document.querySelector('.col_2__lin_2').textContent
      var n1c2 = document.querySelector('.col_2__lin_3').textContent
