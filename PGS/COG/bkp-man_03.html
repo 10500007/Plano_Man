@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+ <style>
+   table {
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: collapse;
+        border: 1px solid #d4d4d4;
+        font-size: 15px;
+        font-family: sans-serif;
+      }
+    
+      th:nth-child(even) {
+        background: #fcfcfc;
+      }
+    
+      th, td {
+        padding: 10px 30px;
+      }
+    
+      th {
+        border-bottom: 1px solid #d4d4d4;
+      }     
+ </style>
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+$.ajax({
+    url: '/CSV/COG/log_manual_03.csv',
+    dataType: 'text',
+  }).done(successFunction);
+
+  function successFunction(data) {
+        var allRows = data.split(',');
+        var table = '<table>';
+        var  arra = [];
+        for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+        
+          if (singleRow === 0) {           
+            table += '<thead>';
+            table += '<tr>';
+          } else {
+            table += '<tr>';
+          }
+          var rowCells = allRows[singleRow].split(',');
+          for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+            if (singleRow === 0) {
+            
+              table += '<th>';
+              table += rowCells[rowCell];
+              table += '</th>';
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            } else {
+                      //console.log(rowCells[rowCell])
+                      //console.log(singleRow)
+
+                     
+
+                      //var valores.parseFloat = rowCells[rowCell]
+                      //##inserindo os valores da linha no array ---------------###
+                      var valores = parseFloat(eval(rowCells[rowCell]))
+                      arra.push(valores)
+                     
+                      var dias = [041021, 111021, 181021, 251021, 011121, 081121, 151121, 221121, 291121, 061221, 131221, 201221, 271221, 030122, 100122, 170122, 240122, 310122, 070222, 140222, 210222, 280222, 070322, 140322, 210322, 280322, 040422, 110422, 180422, 250422, 020522, 090522, 160522, 230522, 300522, 060622, 130622, 200622, 270622, 040722, 110722, 180722, 250722, 010822, 080822, 150822, 220822, 290822, 050922, 120922, 190922, 260922, 031022, 101022, 171022, 241022, 311022, 071122, 141122, 211122, 281122, 051222, 121222, 191222, 261222];
+                     
+
+                    if(dias.indexOf(valores) == -1 ){
+                      
+                      table += '<td>';
+                      table += rowCells[rowCell];
+                      table += '</td>';
+
+                    }
+                    
+            }
+          }
+          
+        /*  if (singleRow === 0) {
+            table += '</tr>';
+            table += '</thead>';
+            table += '<tbody>';
+          } else {
+            table += '</tr>';
+          }
+           */
+        } 
+       
+        table += '</tbody>';
+        table += '</table>';
+        $('body').append(table);
+
+       
+      }
+ 
+ 
+ /* FIM Selecionar Cabecçalho --------------------------------*/
+
+
+ /*Reduzinho casa coluna 1 linha 1,2,3,4,5*/
+ 
+ 
+ 
+ 
+//----------------------------------------------------------------------------//
+
+  
+
+
+  </script>
+
+
+</body>
+</html>
